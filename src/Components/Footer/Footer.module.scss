@@ -1,3 +1,152 @@
-.footer{
-    margin-top: 5vh;
+.containerContact {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8.375rem;
+  text-align: center;
+}
+
+.contactHeader,
+.infoGrad {
+  font-family: var(--srijan4-font-2);
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  background: var(--srijan4-gradient-6);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.credInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+  font-size: 1.2rem;
+  line-height: 1.25rem;
+}
+.credItems,
+.credItemsphone,
+.credItemsmobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+  width: 16.5rem;
+  font-family: var(--srijan4-font-2);
+  font-weight: bold;
+}
+.credText{
+  margin-top: 1rem;
+}
+.credItemsmobile {
+  display: none;
+}
+
+.iconSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--srijan4-dark-grey);
+  padding: 4rem;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+.facebookIcon {
+  width: 2.91rem;
+  height: 2.91rem;
+  color: var(--srijan4-white);
+}
+.instaIcon {
+  width: 2.91rem;
+  height: 2.91rem;
+  color: var(--srijan4-white);
+}
+.linkedinIcon {
+  width: 2.91rem;
+  height: 2.91rem;
+  color: var(--srijan4-white);
+}
+
+@media screen and (max-width: 1200px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .containerContact {
+    padding-top: 0;
+  }
+  .contactHeader,
+  .infoGrad {
+    padding-top: 0;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .credInfo {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 80vw;
+    margin: auto;
+  }
+  .credItemsmobile {
+    display: inline-block;
+  }
+  .credItems,
+  .credItemsmobile {
+    font-family: var(--srijan4-font-1);
+    font-size: 0.625rem;
+    line-height: 0.9375rem;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 1.2rem;
+    max-width: 40vw;
+  }
+  .credText {
+    font-size: 0.5rem;
+    line-height: 0.75rem;
+    //max-width: 7.4375rem;
+    max-width: 75%;
+    margin: auto;
+    margin-top: 0.5rem;
+  }
+  .credItemsphone {
+    display: none;
+  }
+
+  .footerDesc {
+    font-size: 0.75rem;
+    line-height: 164.22%;
+    max-width: 80vw;
+    font-weight: 900;
+    margin: auto;
+    padding-top: 3.75rem;
+    margin-bottom: 3.85rem;
+  }
+  .containerFooter {
+    margin-top: 0;
+  }
+  .facebookIcon {
+    height: 2rem;
+    width: 2rem;
+    margin-left: 6.25rem;
+    margin-right: 0;
+  }
+  .instaIcon {
+    height: 2rem;
+    width: 2rem;
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+  .linkedinIcon {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 5.875rem;
+  }
+  .iconSection {
+    padding-bottom: 3.125rem;
+    gap: 1rem;
+  }
 }
