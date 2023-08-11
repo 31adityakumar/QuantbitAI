@@ -60,7 +60,7 @@ const Navbar = () => {
               isActive ? `${styles.navlinks} ${styles.active}` : styles.navlinks
             }
           >
-            <a to="/">SERVICES</a>
+            <a to="/">Career</a>
           </li>
           <li
             className={({ isActive }) =>
