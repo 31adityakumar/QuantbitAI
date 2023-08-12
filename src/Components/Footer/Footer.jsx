@@ -17,16 +17,18 @@ const Footer = () => {
             </span>
           </p>
           <p className={styles.credItems}>
-            Website<span className={styles.credText}>www.nits.ac.in</span>
+            Website
+            <span className={styles.credText}>
+              <a href="https://www.quantbitai.in" target="blank">
+                www.quantbitai.in
+              </a>
+            </span>
           </p>
           <p className={styles.credItems}>
-            Email<span className={styles.credText}>xxxx@xxx.com</span>
+            Email<span className={styles.credText}>quantbitai@gmail.com</span>
           </p>
           <p className={styles.credItemsphone}>
-            Phone Number<span className={styles.credText}>+91-xxxxxxxxxx</span>
-          </p>
-          <p className={styles.credItemsmobile}>
-            Phone No.<span className={styles.credText}>+91-xxxxxxxxxx</span>
+            Phone Number<span className={styles.credText}>+91-8252819394</span>
           </p>
         </div>
       </div>
