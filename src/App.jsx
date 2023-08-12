@@ -1,22 +1,19 @@
-// import { Routes, Route } from "react-router-dom";
-// import ScrollToTop from './Components/ScrollToTop/ScrollToTop'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home/Home";
+import Team from "./Pages/Team/Team";
+import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
-import Career from "./Pages/Career/Career";
 function App() {
   return (
     <>
-      <Home />
-      {/* <Routes>
-      <Route exact path="./Pages/Career/Career.jsx" component={Career} />
-      <Route exact path="./Components/Footer/Footer.jsx" component={Footer} />
-      </Routes> */}
-      {/* <ScrollToTop>
-      
-      </ScrollToTop> */}
-      {/* <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes> */}
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" element={<Home />} key="route-home-screen" />
+          <Route exact path="/team" element={<Team />} />
+          <Route exact path="/contact" element={<Footer />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

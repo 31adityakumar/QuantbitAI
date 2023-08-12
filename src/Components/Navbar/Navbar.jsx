@@ -1,4 +1,6 @@
 import { useState } from "react";
+// import { Router } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import styles from "./Navbar.module.scss";
 import Data from "../../assets/Data.json";
@@ -32,7 +34,7 @@ const Navbar = () => {
           );
         })}
       </section>
-      <section className={styles.right}>
+      <nav className={styles.right}>
         <button className={styles.toggleIcon} onClick={handleToggle}>
           {toggle ? (
             <Icon icon="basil:cross-outline" height="40" />
@@ -41,36 +43,56 @@ const Navbar = () => {
           )}
         </button>
         <ul className={styles.links}>
-          <li
-            className={({ isActive }) =>
-              isActive ? `${styles.navlinks} ${styles.active}` : styles.navlinks
-            }
-          >
-            <a to="/">HOME</a>
+            <li
+              className={({ isActive }) =>
+                isActive
+                  ? `${styles.navlinks} ${styles.active}`
+                  : styles.navlinks
+              }
+            >
+              <NavLink to="/">HOME</NavLink>
+            </li>
+            <li
+              className={({ isActive }) =>
+                isActive
+                  ? `${styles.navlinks} ${styles.active}`
+                  : styles.navlinks
+              }
+            >
+              <NavLink to="/team">ABOUT</NavLink>
+            </li>
+            <li
+              className={({ isActive }) =>
+                isActive
+                  ? `${styles.navlinks} ${styles.active}`
+                  : styles.navlinks
+              }
+            >
+              <NavLink to="/">CAREER</NavLink>
+            </li>
+            <li
+              className={({ isActive }) =>
+                isActive
+                  ? `${styles.navlinks} ${styles.active}`
+                  : styles.navlinks
+              }
+            >
+              <NavLink to="/contact">CONTACT US</NavLink>
+            </li>
+          </ul>
+        {/* <ul>
+          <li>
+            <NavLink to="/">Home</NavLink>
           </li>
-          <li
-            className={({ isActive }) =>
-              isActive ? `${styles.navlinks} ${styles.active}` : styles.navlinks
-            }
-          >
-            <a to="/">ABOUT</a>
+          <li>
+            <NavLink to="/blogs">Blogs</NavLink>
           </li>
-          <li
-            className={({ isActive }) =>
-              isActive ? `${styles.navlinks} ${styles.active}` : styles.navlinks
-            }
-          >
-            <a to="/">Career</a>
+          <li>
+            <NavLink to="/contact">Contact</NavLink>
           </li>
-          <li
-            className={({ isActive }) =>
-              isActive ? `${styles.navlinks} ${styles.active}` : styles.navlinks
-            }
-          >
-            <a to="#">CONTACT US</a>
-          </li>
-        </ul>
-      </section>
+        </ul> */}
+      </nav>
+      <Outlet />
     </div>
   );
 };
