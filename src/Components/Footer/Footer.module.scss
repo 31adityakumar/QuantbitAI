@@ -38,7 +38,14 @@
   font-weight: bold;
 }
 .credText{
-  margin-top: 1rem;
+  margin: 1rem 0rem;
+  color: cadetblue;
+  a{
+    cursor: pointer;
+    text-decoration: none;
+    color: cadetblue;
+
+  }
 }
 .credItemsmobile {
   display: none;
