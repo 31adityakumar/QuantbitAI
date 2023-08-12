@@ -1,12 +1,10 @@
-import Footer from '../../Components/Footer/Footer';
-import Navbar from '../../Components/Navbar/Navbar';
-import './Home.module.scss'
+import Hero from '../../Components/Hero/Hero';
+import styles from './Home.module.scss'
 const Home = () => {
     return(
-        <>
-            <Navbar/>
-            <Footer/>
-        </>
+        <section className={styles.home}>
+            <Hero/>
+        </section>
     )
 }
 
