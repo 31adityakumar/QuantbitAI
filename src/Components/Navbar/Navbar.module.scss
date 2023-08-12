@@ -4,43 +4,49 @@
     align-items: center;
     justify-content: $position;
   }
+  
   .navbar {
+    background-color: var(--c4-blue-1-100);
     @include flexDisplay(space-between, row);
-    flex-wrap: wrap;
-    margin-bottom: 0.5rem;
-    position: fixed;
+    height: 4rem;
+    position:static;
     top: 0;
-    padding: 0.5rem 1rem;
-    height: 13vh;
-    width: 100vw;
+    width: 100%;
     transition: all 0.3s ease-out;
     z-index: 1000;
-    background-color: white;
   }
+  
   .expanded {
-    background-color: white;
+    background-color: var(--c4-blue-1-100);
   }
+  
   .left {
+    @include flexDisplay(center, row);
+    margin-left: 50px;
     transition: all 0.3s ease-in-out;
+    img {
+      width: 8rem;
+      height: auto;
+    }
   }
+  
   .right {
     @include flexDisplay(space-around, row);
-    width: 40vw;
+    width: 30%;
+    margin-right: 3%
   }
-  .right ul li {
-    list-style: none;
-    margin-right: 1.5rem;
-    font-size: 1.35vw;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  .right ul li a {
-    text-decoration: none;
-  }
+  
   .links {
-    @include flexDisplay(center, row);
+    @include flexDisplay(space-between, row);
+    width: 100%;
   }
+  
   .navlinks {
+    color: var(--c4-white-1-100);
+    font-weight: 500;
+    font-size: 1.05rem;
+    // margin-right: 20%;
+    cursor: pointer;
     text-decoration: none;
     position: relative;
     transition: all 0.15s ease-in-out;
@@ -52,17 +58,18 @@
       height: 0.25rem;
       bottom: -0.25rem;
       left: 0;
+      background-color: var(--c4-white-1-100);
       border-radius: 20%;
       visibility: hidden;
       -webkit-transform: scaleX(0);
       transform: scaleX(0);
-      -webkit-transition: all 0.1s ease-in-out 0s;
+      -webkit-transition: all 0.3s ease-in-out 0s;
       transition: all 0.3s ease-in-out 0s;
     }
   }
   
   .active {
-    color: black;
+    color: var(--c4-white-1-100);
   
     &::before {
       visibility: visible;
@@ -70,84 +77,77 @@
       transform: scaleX(1);
     }
   }
+  
+  .profile {
+    @include flexDisplay(row, center);
+    margin-left: 15%;
+  }
+  
   .toggleIcon {
     display: none;
-    background: none;
+    color: var(--c4-white-1-100);
+    background-color: var(--c4-blue-1-100);
     border: none;
   }
-  .logoPart {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  .logoPart img {
-    height: 4rem;
-    width: 4rem;
-    border-radius: 5rem;
-  }
-  @media only screen and (max-width: 900px)  {
-    .navbar {
-      transition: 0.3s all ease-in-out;
-      position: relative;
-      height: 9vh;
   
+  @media (max-width: 1000px) {
+    .navbar {
+      transition: 0.5s all ease-in-out;
+      position: relative;
     }
+  
     .navbar.expanded {
       height: 50vh;
+  
+      .left {
+        top: 1rem;
+      }
     }
-    .navbar.expanded ul {
+  
+    .navbar.expanded .links {
       @include flexDisplay(center, column);
       position: absolute;
-      top: 5rem;
+      top: 7.5rem;
       left: 0;
       width: 100%;
       opacity: 1;
-      transition: all 0.4s ease-in;
     }
+  
+    .navbar.expanded .links a {
+      margin: 0.9375rem 0;
+      font-size: 1.25rem;
+    }
+  
+    .toggleIcon {
+      display: block;
+      position: absolute;
+      top: 0.8rem;
+      right: 2.5rem;
+    }
+  
     .left {
       display: block;
       position: absolute;
       top: 0.5rem;
     }
-    .logoPart img {
-      height: 2.5rem;
-      width: 2.5rem;
-      border-radius: 5rem;
-    }
-    .toggleIcon {
-      display: block;
-      position: absolute;
-      top: .5rem;
-      right: 1rem;
-    }
   
-    ul {
+    .links {
       @include flexDisplay(center, column);
       position: absolute;
       top: -18.75rem;
       left: 0;
       width: 100%;
       opacity: 0;
+      transition: all 0.5s ease-in-out;
     }
   
-    .right ul li  {
-      margin-bottom: 1rem ;
+    .links a {
+      margin: 0.9375rem 0;
       font-size: 1.5rem;
-      margin-right: 0rem;
     }
-    
-  }
-  @media only screen and (max-width: 600px)  {
-      .navbar {
-          height: 7.5vh;
-        }
-        .navbar.expanded {
-          height: 35vh;
-        }
-        .logoPart img {
-          height: 2.5rem;
-          width: 2.5rem;
-          border-radius: 5rem;
-        }
+  
+    .profile {
+      margin: 0;
+    }
   }
   
