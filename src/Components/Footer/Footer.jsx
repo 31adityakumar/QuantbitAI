@@ -10,26 +10,31 @@ const Footer = () => {
           Contact<span className={styles.infoGrad}> Info</span>
         </p>
         <div className={styles.credInfo}>
-          <p className={styles.credItems}>
-            Address
-            <span className={styles.credText}>
-              National Institute of Technology Silchar Cachar, Assam
-            </span>
-          </p>
-          <p className={styles.credItems}>
-            Website
-            <span className={styles.credText}>
-              <a href="https://www.quantbitai.in" target="blank">
-                www.quantbitai.in
-              </a>
-            </span>
-          </p>
-          <p className={styles.credItems}>
-            Email<span className={styles.credText}>quantbitai@gmail.com</span>
-          </p>
-          <p className={styles.credItemsphone}>
-            Phone Number<span className={styles.credText}>+91-8252819394</span>
-          </p>
+          <div className={styles.right}>
+            <p className={styles.credItems}>
+              Address
+              <span className={styles.credText}>
+                National Institute of Technology Silchar Cachar, Assam
+              </span>
+            </p>
+            <p className={styles.credItems}>
+              Website
+              <span className={styles.credText}>
+                <a href="https://www.quantbitai.in" target="blank">
+                  www.quantbitai.in
+                </a>
+              </span>
+            </p>
+          </div>
+          <div className={styles.left}>
+            <p className={styles.credItems}>
+              Email<span className={styles.credText}>quantbitai@gmail.com</span>
+            </p>
+            <p className={styles.credItemsphone}>
+              Phone Number
+              <span className={styles.credText}>+91-8252819394</span>
+            </p>
+          </div>
         </div>
       </div>
       <div className={styles.containerFooter}>

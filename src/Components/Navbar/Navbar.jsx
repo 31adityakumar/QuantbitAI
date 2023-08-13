@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { Icon } from '@iconify/react';
+import { Icon } from "@iconify/react";
 import { useEvent } from "../../Hooks/useEvent";
 import styles from "./Navbar.module.scss";
 
@@ -21,9 +21,14 @@ const Navbar = () => {
 
   useEvent("scroll", changeToggle);
   return (
-    <nav className={toggle ? `${styles.navbar} ${styles.expanded}` : styles.navbar}>
+    <nav
+      className={toggle ? `${styles.navbar} ${styles.expanded}` : styles.navbar}
+    >
       <Link className={styles.left} to="/">
-        <img src="https://res.cloudinary.com/dnvhl9pru/image/upload/v1691870682/logo_final_last-removebg-preview_urky2j.png" alt="logo" />
+        <img
+          src="https://res.cloudinary.com/dnvhl9pru/image/upload/v1691870682/logo_final_last-removebg-preview_urky2j.png"
+          alt="logo"
+        />
       </Link>
       <div className={styles.right}>
         <button className={styles.toggleIcon} onClick={handleToggle}>
@@ -40,7 +45,7 @@ const Navbar = () => {
             }
             to="/"
           >
-            HOME
+            Home
           </NavLink>
           <NavLink
             className={({ isActive }) =>
@@ -48,15 +53,31 @@ const Navbar = () => {
             }
             to="/about"
           >
-            ABOUT
+            About
           </NavLink>
           <NavLink
             className={({ isActive }) =>
               isActive ? `${styles.navlinks} ${styles.active}` : styles.navlinks
             }
-            to="/team"
+            to="/services"
           >
-            OUR TEAM
+            Services
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? `${styles.navlinks} ${styles.active}` : styles.navlinks
+            }
+            to="/internships"
+          >
+            Internships
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? `${styles.navlinks} ${styles.active}` : styles.navlinks
+            }
+            to="/contact"
+          >
+            Contact
           </NavLink>
         </div>
       </div>
