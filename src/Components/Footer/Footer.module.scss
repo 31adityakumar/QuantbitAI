@@ -20,15 +20,19 @@
 
 .credInfo {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin-top: 2rem;
   font-size: 1.2rem;
   line-height: 1.25rem;
 }
+.left, .right{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 .credItems,
-.credItemsphone,
-.credItemsmobile {
+.credItemsphone {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,10 +51,6 @@
 
   }
 }
-.credItemsmobile {
-  display: none;
-}
-
 .iconSection {
   display: flex;
   justify-content: space-around;
@@ -75,65 +75,24 @@
   height: 2.91rem;
   color: var(--srijan4-white);
 }
-
-@media screen and (max-width: 1200px) {
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  .containerContact {
-    padding-top: 0;
-  }
-  .contactHeader,
-  .infoGrad {
-    padding-top: 0;
-    margin-top: 1rem;
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-    margin-bottom: 0.75rem;
-  }
+@media screen and (max-width: 1070px) {
   .credInfo {
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    max-width: 80vw;
-    margin: auto;
+    max-width: 90vw;
+    margin: 2rem auto;
+
   }
-  .credItemsmobile {
-    display: inline-block;
-  }
-  .credItems,
-  .credItemsmobile {
-    font-family: var(--srijan4-font-1);
-    font-size: 0.625rem;
-    line-height: 0.9375rem;
-    font-weight: 400;
-    margin: 0;
-    margin-bottom: 1.2rem;
-    max-width: 40vw;
+  .left, .right {
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+
   }
   .credText {
-    font-size: 0.5rem;
-    line-height: 0.75rem;
-    //max-width: 7.4375rem;
-    max-width: 75%;
-    margin: auto;
-    margin-top: 0.5rem;
-  }
-  .credItemsphone {
-    display: none;
-  }
+    font-size: 1rem;
+    line-height: 1.2rem;
 
-  .footerDesc {
-    font-size: 0.75rem;
-    line-height: 164.22%;
-    max-width: 80vw;
-    font-weight: 900;
-    margin: auto;
-    padding-top: 3.75rem;
-    margin-bottom: 3.85rem;
-  }
-  .containerFooter {
-    margin-top: 0;
   }
   .facebookIcon {
     height: 2rem;
@@ -155,5 +114,25 @@
   .iconSection {
     padding-bottom: 3.125rem;
     gap: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .credInfo {
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 2rem 2rem;
+
+  }
+  .left, .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+
+  }
+  .credText {
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+
   }
 }

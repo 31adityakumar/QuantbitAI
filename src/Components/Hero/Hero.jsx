@@ -1,16 +1,14 @@
 import styles from "./Hero.module.scss";
 const Hero = () => {
   return (
-    <>
-      <div className={styles.hero}>
-        <div className={styles.heroMain}>
-          <h1 style={{ userSelect: "none" }}>QuantbitAI</h1>
-          <h2 style={{ userSelect: "none" }}>
-            Future Aheads
-          </h2>
-        </div>
-      </div>
-    </>
+    <section className={styles.hero}>
+  <div className={styles.content}>
+    <h2>QuantbitAI</h2>
+    <p> <h3>Present is your <span className={styles.future}>Future</span></h3></p>
+    <p> Build Skills n Launch Your Career</p>
+    </div>
+  <div className={styles.waves}></div>
+</section>
   );
 };
 

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @font-face {
   font-family: "Gilroy";
   src: url("/fonts/gilroy/Gilroy-Bold.ttf");
@@ -87,6 +88,23 @@
   --paragraph-2-text-weight: 300;
 
   --srijan4-navbar-height: 4vh;
+}
+:root {
+  --c4-font-1: "Poppins", sans-serif;
+
+  --c4-white-1-100: #FFFFFF;
+  --c4-blue-1-100: rgb(61, 66, 176);
+  --c4-black-1-100: #2B2B2B;
+  --c4-grey-1-100: #B4B4B4;
+  --c4-header-blue-1-100: #00067F;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--c4-font-1);
+  -webkit-tap-highlight-color: transparent;
 }
 
 * {
