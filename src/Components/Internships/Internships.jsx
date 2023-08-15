@@ -3,7 +3,7 @@ import styles from "./Internship.module.scss";
 const Internships = () => {
   return (
     <section className={styles.internship}>
-      <h1 className={styles.head}> Our Internships </h1>
+      <h1 className={styles.head}> Careers </h1>
       <div className={styles.box}>
         <div className={styles.card}>
           <img
