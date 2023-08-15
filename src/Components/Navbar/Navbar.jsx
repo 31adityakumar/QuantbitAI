@@ -67,17 +67,9 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? `${styles.navlinks} ${styles.active}` : styles.navlinks
             }
-            to="/internships"
+            to="/careers"
           >
-            Internships
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? `${styles.navlinks} ${styles.active}` : styles.navlinks
-            }
-            to="/contact"
-          >
-            Contact
+            Careers
           </NavLink>
         </div>
       </div>

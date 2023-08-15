@@ -71,3 +71,10 @@ img {
     width: 80vw;
   }
 }
+@media (max-width: 500px) {
+  .head{
+    text-align: center;
+    padding: 2rem 0;
+
+  }
+}
