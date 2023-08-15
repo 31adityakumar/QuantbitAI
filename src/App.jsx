@@ -16,7 +16,7 @@ function App() {
           <Route exact path="/team" element={<Team />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/services" element={<Services />} />
-          <Route exact path="/internships" element={<Internships />} />
+          <Route exact path="/careers" element={<Internships />} />
         </Routes>
         <Footer />
       </BrowserRouter>
